@@ -1,8 +1,9 @@
 {
   "name": "car-design",
   "version": "1.0.0",
-  "description": "",
+  "description": "一个react组件库",
   "main": "index.js",
+  "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,10 +19,35 @@
   "homepage": "https://github.com/crying-rain/car-design#readme",
   "devDependencies": {
     "@types/react": "^18.0.9",
+    "@types/react-dom": "^17.0.13",
     "babel": "^6.23.0",
+    "css-loader": "^6.7.1",
+    "husky": "^7.0.4",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "lint-staged": "^12.4.1",
     "react": "^18.1.0",
+    "react-dom": "^18.0.0",
+    "react-transition-group": "^4.4.2",
+    "style-loader": "^3.3.1",
     "typescript": "^4.6.4",
     "webpack": "^5.72.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "lint-staged": {
+    "components/**/*.ts?(x)": [
+      "prettier --write --ignore-unknown",
+      "eslint --fix",
+      "git add"
+    ],
+    "components/**/*.less": [
+      "stylelint --syntax less --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }

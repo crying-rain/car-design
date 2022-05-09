@@ -1,10 +1,10 @@
 import React from "react";
 export interface ButtonPros{
-    name:string
+    label:string
 }
-const button = ()=>{
+const Button = (props:ButtonPros)=>{
     return(
-        <div></div>
+        <button>{props.label}</button>
     )
 }
-export default button
+export default Button
