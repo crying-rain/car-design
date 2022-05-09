@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/crying-rain/car-design#readme",
   "devDependencies": {
-    "react": "^18.1.0"
-  }
+    "@types/react": "^18.0.9",
+    "babel": "^6.23.0",
+    "react": "^18.1.0",
+    "typescript": "^4.6.4",
+    "webpack": "^5.72.0"
+  },
+  "dependencies": {}
 }
